@@ -140,7 +140,7 @@ def pregunta_05():
     """
 
     # Importe mean_squared_error
-    from ____ import ____
+    from sklearn.metrics import mean_squared_error as mse
 
     # Cargue las variables.
     x_train, x_test, y_train, y_test = pregunta_02()
