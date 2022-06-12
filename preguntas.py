@@ -123,14 +123,15 @@ def pregunta_04():
     # y los siguientes parámetros adicionales:
     #  * Validación cruzada con 5 particiones
     #  * Compare modelos usando r^2
-    gridsearchcv = GridSearchCV(
-        estimator=estimator,
-        param_grid=param_grid,
-        ___ = ____  
-        ___ = ____  
-    )
+    # gridsearchcv = GridSearchCV(
+    #     estimator=estimator,
+    #     param_grid=param_grid,
+    #     ___ = ____  
+    #     ___ = ____  
+    # )
 
-    return gridsearchcv
+    # return gridsearchcv
+    return None
 
 
 def pregunta_05():
