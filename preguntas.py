@@ -19,7 +19,7 @@ def pregunta_01():
     df = pd.read_csv("concrete.csv")
 
     # Asigne la columna `strength` a la variable `y`.
-    y = df["strength"]  
+    y = df["strength"]
 
     # Asigne una copia del dataframe `df` a la variable `X`.
     X = df.copy()
@@ -37,24 +37,24 @@ def pregunta_02():
     """
 
     # Importe train_test_split
-    from ____ import ____
+    from sklearn.model_selection import train_test_split
 
     # Cargue los datos de ejemplo y asigne los resultados a `X` y `y`.
     x, y = pregunta_01()
 
     # Divida los datos de entrenamiento y prueba. La semilla del generador de números
     # aleatorios es 12453. Use el 75% de los patrones para entrenamiento.
-    (  
-        x_train,  
-        x_test,  
-        y_train,  
-        y_test,  
-    ) = ____(  
-        ____,  
-        ____,  
-        test_size=____,  
-        random_state=____,  
-    )  
+    (
+        x_train,
+        x_test,
+        y_train,
+        y_test,
+    ) = train_test_split(
+        x,
+        y,
+        test_size=0.25,
+        random_state=12453,
+    )
 
     # Retorne `X_train`, `X_test`, `y_train` y `y_test`
     return x_train, x_test, y_train, y_test
@@ -76,11 +76,11 @@ def pregunta_03():
         steps=[
             (
                 "minmaxscaler",
-                ____(___),  
+                ____(___),
             ),
             (
                 "mlpregressor",
-                ____(____),  
+                ____(____),
             ),
         ],
     )
@@ -108,13 +108,13 @@ def pregunta_04():
     #   * Use parada temprana
 
     param_grid = {
-        ___: ____,  
-        ___: ____,  
-        ___: ____,  
-        ___: ____,  
-        ___: ____,  
-        ___: ____,  
-        ___: ____,  
+        ___: ____,
+        ___: ____,
+        ___: ____,
+        ___: ____,
+        ___: ____,
+        ___: ____,
+        ___: ____,
     }
 
     estimator = pregunta_03()
@@ -126,8 +126,8 @@ def pregunta_04():
     # gridsearchcv = GridSearchCV(
     #     estimator=estimator,
     #     param_grid=param_grid,
-    #     ___ = ____  
-    #     ___ = ____  
+    #     ___ = ____
+    #     ___ = ____
     # )
 
     # return gridsearchcv
@@ -152,17 +152,17 @@ def pregunta_05():
     estimator.fit(x_train, y_train)  #
 
     # Pronostique para las muestras de entrenamiento y validacion
-    y_trian_pred = ____.____(____)  
-    y_test_pred = ____.____(____)  
+    y_trian_pred = ____.____(____)
+    y_test_pred = ____.____(____)
 
     # Calcule el error cuadrático medio de las muestras
-    mse_train = ____(  
-        ___,  
-        ___,  
+    mse_train = ____(
+        ___,
+        ___,
     )
-    mse_test = ____(  
-        ___,  
-        ___,  
+    mse_test = ____(
+        ___,
+        ___,
     )
 
     # Retorne el mse de entrenamiento y prueba
